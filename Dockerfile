@@ -1,4 +1,4 @@
-FROM alpine:3.11.6
+FROM alpine:3.12.0
 
 LABEL maintainer="Mark <mark.binlab@gmail.com>"
 
@@ -19,7 +19,7 @@ RUN addgroup -S -g ${GID} ${GROUP} \
            -u ${UID} -G ${GROUP} ${USER} \
     && sed -i "s/${USER}:!/${USER}:*/g" /etc/shadow \
     && set -x \
-    && apk add --no-cache openssh-server \
+    && apk add --no-cache openssh-server openssh-client python3 \
     && echo "Welcome to Bastion!" > /etc/motd \
     && chmod +x /usr/sbin/bastion \
     && mkdir -p ${HOST_KEYS_PATH} \
