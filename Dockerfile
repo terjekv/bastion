@@ -28,6 +28,10 @@ RUN addgroup -S -g ${GID} ${GROUP} \
 
 EXPOSE 22/tcp
 
+LABEL org.opencontainers.image.source=https://github.com/terjekv/docker-bastion
+LABEL org.opencontainers.image.description="A bastion server with python3 for sshuttle support."
+LABEL org.opencontainers.image.licenses=MIT
+
 VOLUME ${HOST_KEYS_PATH}
 
 ENTRYPOINT ["bastion"]
