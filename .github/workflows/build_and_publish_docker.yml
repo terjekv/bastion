@@ -43,8 +43,8 @@ jobs:
           context: ./
           # Note: tags has to be all lower-case
           tags: |
-            terjekv/bastion-with-sshuttle:latest 
-            ghcr.io/terjekv/bastion-with-sshuttle:latest
+            terjekv/bastion:latest 
+            ghcr.io/terjekv/bastion:latest
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
 
