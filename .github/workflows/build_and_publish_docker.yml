@@ -55,7 +55,7 @@ jobs:
         id: scan
         uses: crazy-max/ghaction-container-scan@v2
         with:
-          image: terjekv/docker:latest
+          image: terjekv/bastion:latest
           dockerfile: ./Dockerfile
       -
         name: Upload SARIF file
