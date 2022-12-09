@@ -12,7 +12,7 @@ jobs:
   # define job to build and publish docker image
   build-and-push-docker-image:
     name: Build Docker image and push to repositories
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout code
